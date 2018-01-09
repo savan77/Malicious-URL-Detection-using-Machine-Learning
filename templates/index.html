@@ -1,0 +1,20 @@
+{% from "_formhelpers.html" import render_field %}
+<html>
+<head>
+<title>Malicious URL Detection</title>
+</head>
+<body>
+	<h3> Malicious URL Detection Using Machine Learning </h3>
+	
+	<p> Current Model - Logistic Regression. </p>
+	<p> Please enter URL with protocol specified i.e https://www.youtube.com
+	<form method="POST" action="/">
+	   <dl>
+	    {{ form.csrf_token }}
+	    {{ render_field(form.url) }}
+	    <input type="submit" value="Check">
+	    </dl>
+	</form>
+
+</body>
+</html>
